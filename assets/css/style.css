@@ -1,0 +1,157 @@
+/* GERAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #000;
+
+    --mertilho-circle: #FFCBEA;
+    --mertilho-background: #C976A7;
+
+    --kiwi-circle: #ECFFCC;
+    --kiwi-background: #8FB351;
+
+    --morango-circle: #FFE1E2;
+    --morango-background: #FFE1E2;
+
+    --banana-circle: #FFF7CF;
+    --banana-background: #F5DE6E;
+}
+
+/* ESTILO DO HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+header img{
+    width: 120px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+}
+
+header nav a{
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+/* ESTILO DO BODY */
+body, button, a {
+    color: var(--text);
+    font: 400 1rem "Open Sans", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+    position: relative;
+
+    padding-top: 64px 120px 0;
+
+    background-color: var(--banana-background);
+    transition: all 0.6s;
+}
+
+/* ESTILO DO MAIN */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+    width: 100%;
+    max-width: 700px;
+}
+
+main h1{
+    font-size: 86px;
+    line-height: 1.1;
+}
+
+main p{
+    font-size: 26px;
+    color: #333;
+}
+
+main div{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin-top: 32px;
+}
+
+.button_smoothie{
+    border: none;
+    background: transparent;
+    transition: all 0.4s;
+}
+
+main div:hover .button_smoothie:hover{
+    cursor: pointer;
+    transform: translateY(-20px);
+}
+
+main div:hover .button_smoothie:not(:hover){
+    opacity: 0.6;
+    filter: grayscale(0.3);
+}
+
+.button_smoothie img {
+    width: 120px;
+    height: auto;
+}
+
+/* ESTILO DO BOWLS */
+#bowls{
+    position: fixed;
+    bottom: -1110px;
+    right: -1110px;
+    z-index: -1;
+}
+
+#bowls img{
+    width:2200px;
+    height: auto;
+    transition: all 0.6s;
+}
+
+#bowls.banana img{
+    transform: rotate(0deg);
+}
+
+#bowls.morango img{
+    transform: rotate(-90deg);
+}
+
+#bowls.kiwi img{
+    transform: rotate(-180deg);
+}
+
+#bowls.mertilho img{
+    transform: rotate(-270deg);
+}
+
+#circle{
+    position: fixed;
+    bottom: -580px;
+    right: -580px;
+    z-index: -2;
+    width: 1160px;
+    height: 1160px;
+    border-radius: 100%;
+    background-color: var(--banana-circle);
+    transition: all 0.6s;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
